@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92C3843B2FB8554E0050E4FB /* LogEntryMetadataCs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92C384392FB8554E0050E4FB /* LogEntryMetadataCs.hpp */; };
+		92C3843E2FB855760050E4FB /* TaskLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92C3843C2FB855760050E4FB /* TaskLock.cpp */; };
+		92C3843F2FB855760050E4FB /* TaskLock.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92C3843D2FB855760050E4FB /* TaskLock.hpp */; };
+		92C384422FB855CB0050E4FB /* BufferWriteInListCs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92C384402FB855CB0050E4FB /* BufferWriteInListCs.cpp */; };
+		92C384432FB855CB0050E4FB /* BufferWriteInListCs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92C384412FB855CB0050E4FB /* BufferWriteInListCs.hpp */; };
+		92C384462FB863680050E4FB /* CircularLogCs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92C384442FB863680050E4FB /* CircularLogCs.hpp */; };
+		92C384472FB863680050E4FB /* CircularLogCs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92C384452FB863680050E4FB /* CircularLogCs.cpp */; };
+		92C384502FB88BDF0050E4FB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92C3844F2FB88BDF0050E4FB /* main.cpp */; };
+		92C384552FB88C0E0050E4FB /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C384542FB88C0E0050E4FB /* IOKit.framework */; };
+		92C797392FB82C3600178360 /* KEXTLogKit.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92C797382FB82C3600178360 /* KEXTLogKit.hpp */; };
+		92C7973B2FB82C3600178360 /* KEXTLogKit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92C7973A2FB82C3600178360 /* KEXTLogKit.cpp */; };
+		92C797482FB82DFC00178360 /* UserClientCs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92C797462FB82DFB00178360 /* UserClientCs.cpp */; };
+		92C797492FB82DFC00178360 /* UserClientCs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92C797472FB82DFB00178360 /* UserClientCs.hpp */; };
+		92C797592FB8344D00178360 /* TempBufferCs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92C797582FB8344D00178360 /* TempBufferCs.hpp */; };
+		92C7975B2FB8346100178360 /* TempBufferCs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92C7975A2FB8346100178360 /* TempBufferCs.cpp */; };
+		92C7975E2FB8371700178360 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C7975D2FB8371700178360 /* libkmod.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92C3844B2FB88BDF0050E4FB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		92B049D22FB9F0A80095CC09 /* CLI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CLI.md; sourceTree = "<group>"; };
+		92B0EA372FB9ECF4001A1064 /* UserClientCs.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UserClientCs.md; sourceTree = "<group>"; };
+		92C384392FB8554E0050E4FB /* LogEntryMetadataCs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LogEntryMetadataCs.hpp; sourceTree = "<group>"; };
+		92C3843C2FB855760050E4FB /* TaskLock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TaskLock.cpp; sourceTree = "<group>"; };
+		92C3843D2FB855760050E4FB /* TaskLock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TaskLock.hpp; sourceTree = "<group>"; };
+		92C384402FB855CB0050E4FB /* BufferWriteInListCs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BufferWriteInListCs.cpp; sourceTree = "<group>"; };
+		92C384412FB855CB0050E4FB /* BufferWriteInListCs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BufferWriteInListCs.hpp; sourceTree = "<group>"; };
+		92C384442FB863680050E4FB /* CircularLogCs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CircularLogCs.hpp; sourceTree = "<group>"; };
+		92C384452FB863680050E4FB /* CircularLogCs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CircularLogCs.cpp; sourceTree = "<group>"; };
+		92C384482FB86EF40050E4FB /* KEXTLogKit.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KEXTLogKit.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C3844D2FB88BDF0050E4FB /* kextlogctl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = kextlogctl; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C3844F2FB88BDF0050E4FB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		92C384542FB88C0E0050E4FB /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		92C797382FB82C3600178360 /* KEXTLogKit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = KEXTLogKit.hpp; sourceTree = "<group>"; };
+		92C7973A2FB82C3600178360 /* KEXTLogKit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KEXTLogKit.cpp; sourceTree = "<group>"; };
+		92C7973C2FB82C3600178360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92C797462FB82DFB00178360 /* UserClientCs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UserClientCs.cpp; sourceTree = "<group>"; };
+		92C797472FB82DFB00178360 /* UserClientCs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UserClientCs.hpp; sourceTree = "<group>"; };
+		92C797582FB8344D00178360 /* TempBufferCs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TempBufferCs.hpp; sourceTree = "<group>"; };
+		92C7975A2FB8346100178360 /* TempBufferCs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TempBufferCs.cpp; sourceTree = "<group>"; };
+		92C7975D2FB8371700178360 /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libkmod.a; path = MacKernelSDK/Library/x86_64/libkmod.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92C3844A2FB88BDF0050E4FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92C384552FB88C0E0050E4FB /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92C797322FB82C3600178360 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92C7975E2FB8371700178360 /* libkmod.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92B0EA362FB9EC34001A1064 /* wasted */ = {
+			isa = PBXGroup;
+			children = (
+				92B0EA372FB9ECF4001A1064 /* UserClientCs.md */,
+				92B049D22FB9F0A80095CC09 /* CLI.md */,
+			);
+			path = wasted;
+			sourceTree = "<group>";
+		};
+		92C3844E2FB88BDF0050E4FB /* kextlogctl */ = {
+			isa = PBXGroup;
+			children = (
+				92C3844F2FB88BDF0050E4FB /* main.cpp */,
+			);
+			path = kextlogctl;
+			sourceTree = "<group>";
+		};
+		92C7972B2FB82C3600178360 = {
+			isa = PBXGroup;
+			children = (
+				92C797372FB82C3600178360 /* KEXTLogKit */,
+				92C3844E2FB88BDF0050E4FB /* kextlogctl */,
+				92C7975C2FB8371600178360 /* Frameworks */,
+				92C384482FB86EF40050E4FB /* KEXTLogKit.kext */,
+				92C3844D2FB88BDF0050E4FB /* kextlogctl */,
+			);
+			sourceTree = "<group>";
+		};
+		92C797372FB82C3600178360 /* KEXTLogKit */ = {
+			isa = PBXGroup;
+			children = (
+				92B0EA362FB9EC34001A1064 /* wasted */,
+				92C7973C2FB82C3600178360 /* Info.plist */,
+				92C797382FB82C3600178360 /* KEXTLogKit.hpp */,
+				92C7973A2FB82C3600178360 /* KEXTLogKit.cpp */,
+				92C797472FB82DFB00178360 /* UserClientCs.hpp */,
+				92C797462FB82DFB00178360 /* UserClientCs.cpp */,
+				92C797582FB8344D00178360 /* TempBufferCs.hpp */,
+				92C7975A2FB8346100178360 /* TempBufferCs.cpp */,
+				92C384412FB855CB0050E4FB /* BufferWriteInListCs.hpp */,
+				92C384402FB855CB0050E4FB /* BufferWriteInListCs.cpp */,
+				92C384442FB863680050E4FB /* CircularLogCs.hpp */,
+				92C384452FB863680050E4FB /* CircularLogCs.cpp */,
+				92C384392FB8554E0050E4FB /* LogEntryMetadataCs.hpp */,
+				92C3843D2FB855760050E4FB /* TaskLock.hpp */,
+				92C3843C2FB855760050E4FB /* TaskLock.cpp */,
+			);
+			path = KEXTLogKit;
+			sourceTree = "<group>";
+		};
+		92C7975C2FB8371600178360 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92C384542FB88C0E0050E4FB /* IOKit.framework */,
+				92C7975D2FB8371700178360 /* libkmod.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		92C797302FB82C3600178360 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92C797492FB82DFC00178360 /* UserClientCs.hpp in Headers */,
+				92C797592FB8344D00178360 /* TempBufferCs.hpp in Headers */,
+				92C384432FB855CB0050E4FB /* BufferWriteInListCs.hpp in Headers */,
+				92C797392FB82C3600178360 /* KEXTLogKit.hpp in Headers */,
+				92C3843F2FB855760050E4FB /* TaskLock.hpp in Headers */,
+				92C384462FB863680050E4FB /* CircularLogCs.hpp in Headers */,
+				92C3843B2FB8554E0050E4FB /* LogEntryMetadataCs.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		92C3844C2FB88BDF0050E4FB /* kextlogctl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92C384512FB88BDF0050E4FB /* Build configuration list for PBXNativeTarget "kextlogctl" */;
+			buildPhases = (
+				92C384492FB88BDF0050E4FB /* Sources */,
+				92C3844A2FB88BDF0050E4FB /* Frameworks */,
+				92C3844B2FB88BDF0050E4FB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kextlogctl;
+			productName = kextlogctl;
+			productReference = 92C3844D2FB88BDF0050E4FB /* kextlogctl */;
+			productType = "com.apple.product-type.tool";
+		};
+		92C797342FB82C3600178360 /* KEXTLogKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92C7973F2FB82C3600178360 /* Build configuration list for PBXNativeTarget "KEXTLogKit" */;
+			buildPhases = (
+				92C797302FB82C3600178360 /* Headers */,
+				92C797312FB82C3600178360 /* Sources */,
+				92C797322FB82C3600178360 /* Frameworks */,
+				92C797332FB82C3600178360 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KEXTLogKit;
+			productName = KEXTLogKit;
+			productReference = 92C384482FB86EF40050E4FB /* KEXTLogKit.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92C7972C2FB82C3600178360 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					92C3844C2FB88BDF0050E4FB = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					92C797342FB82C3600178360 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 92C7972F2FB82C3600178360 /* Build configuration list for PBXProject "KEXTLogKit" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92C7972B2FB82C3600178360;
+			productRefGroup = 92C7972B2FB82C3600178360;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92C797342FB82C3600178360 /* KEXTLogKit */,
+				92C3844C2FB88BDF0050E4FB /* kextlogctl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92C797332FB82C3600178360 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92C384492FB88BDF0050E4FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92C384502FB88BDF0050E4FB /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92C797312FB82C3600178360 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92C3843E2FB855760050E4FB /* TaskLock.cpp in Sources */,
+				92C7973B2FB82C3600178360 /* KEXTLogKit.cpp in Sources */,
+				92C7975B2FB8346100178360 /* TempBufferCs.cpp in Sources */,
+				92C797482FB82DFC00178360 /* UserClientCs.cpp in Sources */,
+				92C384422FB855CB0050E4FB /* BufferWriteInListCs.cpp in Sources */,
+				92C384472FB863680050E4FB /* CircularLogCs.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		92C384522FB88BDF0050E4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.15;
+			};
+			name = Debug;
+		};
+		92C384532FB88BDF0050E4FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.15;
+			};
+			name = Release;
+		};
+		92C7973D2FB82C3600178360 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		92C7973E2FB82C3600178360 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		92C797402FB82C3600178360 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.3.0d5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KEXTLogKit/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				KERNEL_FRAMEWORK_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MacKernelSDK/Library/x86_64",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.3;
+				MODULE_NAME = angus.KEXTLogKit;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = angus.KEXTLogKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = macosx10.15;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		92C797412FB82C3600178360 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.3.0d5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KEXTLogKit/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				KERNEL_FRAMEWORK_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MacKernelSDK/Library/x86_64",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.3;
+				MODULE_NAME = angus.KEXTLogKit;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = angus.KEXTLogKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = macosx10.15;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92C384512FB88BDF0050E4FB /* Build configuration list for PBXNativeTarget "kextlogctl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92C384522FB88BDF0050E4FB /* Debug */,
+				92C384532FB88BDF0050E4FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92C7972F2FB82C3600178360 /* Build configuration list for PBXProject "KEXTLogKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92C7973D2FB82C3600178360 /* Debug */,
+				92C7973E2FB82C3600178360 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92C7973F2FB82C3600178360 /* Build configuration list for PBXNativeTarget "KEXTLogKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92C797402FB82C3600178360 /* Debug */,
+				92C797412FB82C3600178360 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92C7972C2FB82C3600178360 /* Project object */;
+}

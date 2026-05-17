@@ -1,0 +1,38 @@
+# macOS 系统垃圾文件
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode 编译产物与缓存
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM/
+
+# Xcode 个人用户配置（包含本地绝对路径和光标历史）
+xcuserdata/
+*.xcuserdata
+*.xccheckout
+*.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+*.xcworkspace/xcuserdata/
+
+# 编译生成的内核扩展与 CLI 二进制产物
+*.kext
+*.kext/
+KEXTLogKitCLI
+kextlogctl/kextlogctl
+kextlogctl/build/
+
+# ⚡️【核心追加】死死卡住 MacKernelSDK 里的所有二进制静态库与编译缓存
+MacKernelSDK/Library/
+MacKernelSDK/obj/
+MacKernelSDK/DerivedData/
+*.a
+*.o
+*.out
+
+# 临时文件与日志
+*.log
+*.tmp
