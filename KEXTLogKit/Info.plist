@@ -22,6 +22,10 @@
 			<string>IOKit</string>
 			<key>IOUserClientClass</key>
 			<string>UserClientCs</string>
+			<key>KEXTEnabled</key>
+			<true/>
+			<key>SelfOUTPUT</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>OSBundleLibraries</key>

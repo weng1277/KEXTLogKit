@@ -15,6 +15,7 @@
 #include "TempBufferCs.hpp"
 #include "TaskLock.hpp"
 #include "UserClientCs.hpp"
+#include "CustomizedOptions.hpp"
 #include <IOKit/IOWorkLoop.h>
 #include <IOKit/IOTimerEventSource.h>
 class KEXTLogKit : public IOService
@@ -22,13 +23,14 @@ class KEXTLogKit : public IOService
     OSDeclareDefaultStructors(KEXTLogKit)
 
 private:
+    static DriverStatus s_status;
     CircularLogCs* logBuffer;
     BufferWriteInListCs* writeQueue;
     TaskLock internalLock;
     static KEXTLogKit* s_instance;
     IOWorkLoop*         workLoop;
     IOTimerEventSource* timerSource;
-
+    bool writeInternalLog(uint32_t level, const char* data, size_t len);
     // 定时器回调函数
     void timerFired(IOTimerEventSource* sender);
     
@@ -42,7 +44,7 @@ public:
 
     // 日志接口
     bool writeLogFromKext(const char* ident, uint32_t level, const char* data, size_t len);
-    bool writeInternalLog(const char* data, size_t len);
+    
     void flushQueueToLog();
     size_t readAllLogs(char* outBuffer, size_t maxLen);
     size_t readStreamLogs(char* outBuffer, size_t maxLen);

@@ -33,7 +33,7 @@ const IOExternalMethodDispatch UserClientCs::sMethods[kKEXTLogKitMethodCount] = 
     },
     [1] = {
         .function                 = (IOExternalMethodAction)&sReadStreamLogs,
-        // ⚡️【核心修复】绝对不能填变长标帜！这里明确指定只接收 1 个标量参数（isFirstCall），ioreg 即可通过安全校验
+        // 【核心修复】绝对不能填变长标帜！这里明确指定只接收 1 个标量参数（isFirstCall），ioreg 即可通过安全校验
         .checkScalarInputCount    = 1,
         .checkStructureInputSize  = 0,
         .checkScalarOutputCount   = 0,

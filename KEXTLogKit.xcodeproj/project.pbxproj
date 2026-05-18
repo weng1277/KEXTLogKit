@@ -23,6 +23,8 @@
 		92C797592FB8344D00178360 /* TempBufferCs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92C797582FB8344D00178360 /* TempBufferCs.hpp */; };
 		92C7975B2FB8346100178360 /* TempBufferCs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92C7975A2FB8346100178360 /* TempBufferCs.cpp */; };
 		92C7975E2FB8371700178360 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C7975D2FB8371700178360 /* libkmod.a */; };
+		92CB14702FBB28EF00D6C4AA /* CustomizedOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92CB146E2FBB28EF00D6C4AA /* CustomizedOptions.cpp */; };
+		92CB14712FBB28EF00D6C4AA /* CustomizedOptions.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92CB146F2FBB28EF00D6C4AA /* CustomizedOptions.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +61,8 @@
 		92C797582FB8344D00178360 /* TempBufferCs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TempBufferCs.hpp; sourceTree = "<group>"; };
 		92C7975A2FB8346100178360 /* TempBufferCs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TempBufferCs.cpp; sourceTree = "<group>"; };
 		92C7975D2FB8371700178360 /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libkmod.a; path = MacKernelSDK/Library/x86_64/libkmod.a; sourceTree = "<group>"; };
+		92CB146E2FBB28EF00D6C4AA /* CustomizedOptions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CustomizedOptions.cpp; sourceTree = "<group>"; };
+		92CB146F2FBB28EF00D6C4AA /* CustomizedOptions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CustomizedOptions.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 				92C384392FB8554E0050E4FB /* LogEntryMetadataCs.hpp */,
 				92C3843D2FB855760050E4FB /* TaskLock.hpp */,
 				92C3843C2FB855760050E4FB /* TaskLock.cpp */,
+				92CB146F2FBB28EF00D6C4AA /* CustomizedOptions.hpp */,
+				92CB146E2FBB28EF00D6C4AA /* CustomizedOptions.cpp */,
 			);
 			path = KEXTLogKit;
 			sourceTree = "<group>";
@@ -153,6 +159,7 @@
 				92C797392FB82C3600178360 /* KEXTLogKit.hpp in Headers */,
 				92C3843F2FB855760050E4FB /* TaskLock.hpp in Headers */,
 				92C384462FB863680050E4FB /* CircularLogCs.hpp in Headers */,
+				92CB14712FBB28EF00D6C4AA /* CustomizedOptions.hpp in Headers */,
 				92C3843B2FB8554E0050E4FB /* LogEntryMetadataCs.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +266,7 @@
 				92C7975B2FB8346100178360 /* TempBufferCs.cpp in Sources */,
 				92C797482FB82DFC00178360 /* UserClientCs.cpp in Sources */,
 				92C384422FB855CB0050E4FB /* BufferWriteInListCs.cpp in Sources */,
+				92CB14702FBB28EF00D6C4AA /* CustomizedOptions.cpp in Sources */,
 				92C384472FB863680050E4FB /* CircularLogCs.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,7 +409,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.3.0d5;
+				CURRENT_PROJECT_VERSION = 1.4.0d2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KEXTLogKit/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -412,7 +420,7 @@
 					"$(PROJECT_DIR)/MacKernelSDK/Library/x86_64",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				MODULE_NAME = angus.KEXTLogKit;
 				MODULE_VERSION = 1.0.0d1;
 				PRODUCT_BUNDLE_IDENTIFIER = angus.KEXTLogKit;
@@ -430,7 +438,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.3.0d5;
+				CURRENT_PROJECT_VERSION = 1.4.0d2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KEXTLogKit/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -441,7 +449,7 @@
 					"$(PROJECT_DIR)/MacKernelSDK/Library/x86_64",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				MODULE_NAME = angus.KEXTLogKit;
 				MODULE_VERSION = 1.0.0d1;
 				PRODUCT_BUNDLE_IDENTIFIER = angus.KEXTLogKit;
