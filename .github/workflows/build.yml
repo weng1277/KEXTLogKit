@@ -1,0 +1,78 @@
+
+name: Build KEXTLogKit
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15-intel
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Prepare MacKernelSDK
+        shell: bash
+        run: |
+          if [ ! -f MacKernelSDK/Library/x86_64/libkmod.a ]; then
+            rm -rf MacKernelSDK
+            git clone --depth 1 \
+              https://github.com/acidanthera/MacKernelSDK.git \
+              MacKernelSDK
+          fi
+
+      - name: Build KEXTLogKit x86_64
+        shell: bash
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project KEXTLogKit.xcodeproj \
+            -target KEXTLogKit \
+            -configuration Release \
+            -sdk macosx \
+            ARCHS=x86_64 \
+            ONLY_ACTIVE_ARCH=NO \
+            SDKROOT=macosx \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CONFIGURATION_BUILD_DIR="$PWD/out" \
+            build 2>&1 | tee build.log
+
+      - name: Verify and package Kext
+        shell: bash
+        run: |
+          test -f out/KEXTLogKit.kext/Contents/Info.plist
+          test -f out/KEXTLogKit.kext/Contents/MacOS/KEXTLogKit
+
+          file out/KEXTLogKit.kext/Contents/MacOS/KEXTLogKit
+          lipo -info out/KEXTLogKit.kext/Contents/MacOS/KEXTLogKit
+
+          /usr/libexec/PlistBuddy \
+            -c "Print :CFBundleIdentifier" \
+            out/KEXTLogKit.kext/Contents/Info.plist
+
+          /usr/libexec/PlistBuddy \
+            -c "Print :CFBundleVersion" \
+            out/KEXTLogKit.kext/Contents/Info.plist
+
+          ditto -c -k --sequesterRsrc --keepParent \
+            out/KEXTLogKit.kext \
+            out/KEXTLogKit.zip
+
+      - name: Upload compiled Kext
+        uses: actions/upload-artifact@v4
+        with:
+          name: KEXTLogKit-x86_64
+          path: out/KEXTLogKit.zip
+          if-no-files-found: error
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: build.log
+          if-no-files-found: ignore
