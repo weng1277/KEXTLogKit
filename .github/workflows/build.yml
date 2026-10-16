@@ -38,6 +38,8 @@ jobs:
             SDKROOT=macosx \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
+            CURRENT_PROJECT_VERSION=1.4.0 \
+            MARKETING_VERSION=1.4.0 \
             CONFIGURATION_BUILD_DIR="$PWD/out" \
             build 2>&1 | tee build.log
 
